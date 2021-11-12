@@ -1,0 +1,92 @@
+/* FONTS */
+
+/* CenturyGothic */
+
+/* FONTS */
+
+/* CenturyGothic */
+
+@mixin CenturyGothic($font-family: "Century Gothic", $font-weight: 700, $font-style: normal) {
+    font-family: $font-family;
+    font-weight: $font-weight;
+    font-style: $font-style;
+}
+
+@mixin flex($justify-content: null, $align-items: null, $flex-wrap: null, $flex-direction: null) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+    flex-direction: $flex-direction;
+}
+
+@mixin pseudo($content: "") {
+    content: $content;
+    display: block;
+}
+
+@mixin pos($position: null, $top: null, $bottom: null, $left: null, $right: null) {
+    position: $position;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+}
+
+@mixin font($font-size: null, $line-height: null, $font-weight: null, $text-align: null, $text-transform: null) {
+    font-size: $font-size;
+    line-height: $line-height;
+    text-transform: $text-transform;
+    font-weight: $font-weight;
+    text-align: $text-align;
+}
+
+@mixin background($img) {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: $img;
+}
+
+@mixin border($border-width: null, $border-style: solid, $border-color: null) {
+    border-width: $border-width;
+    border-style: $border-style;
+    border-color: $border-color;
+}
+
+@mixin colors($text, $background, $border) {
+    color: $text;
+    background-color: $background;
+    border-color: $border;
+}
+
+@mixin wh($width: $width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin wh-px($width: $width, $height: $width) {
+    width: #{$width}px;
+    height: #{$height}px;
+}
+
+@mixin media($width, $type: min) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+
+        @if $type==max {
+            $width: $width - 1px;
+        }
+    }
+
+    @media (#{$type}-width: $width) {
+        @content;
+    }
+}
+
+$breakpoints: (sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xlg: 1024px,
+    xl: 1250px,
+    xxl: 1440px);

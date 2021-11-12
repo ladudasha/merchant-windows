@@ -1,0 +1,208 @@
+.measuring {
+	padding: 2.5rem 0;
+
+	// обертка
+	// .measuring__wrapper
+	&__wrapper {
+		@include flex (space-between, center);
+		gap: 4rem;
+		width: 100%;
+	}
+
+	// .measuring__wrap
+	&__wrap {
+		display: flex;
+		gap: 6.8rem;
+		width: 100%;
+
+		@include media (xl) {
+			gap: 3rem;
+		}
+
+		@include media (xlg) {
+			width: 86%;
+		}
+	}
+
+	// обертка svg
+	// .measuring__box-img
+	&__box-img {
+		max-width: 10rem;
+		align-self: baseline;
+
+		svg {
+			@include wh (100%);
+			fill: #2F3B3F;
+
+			@include media (xl) {
+				@include wh (7.9rem, 5.5rem);
+			}
+		}
+	}
+
+	// .measuring__content
+	&__content {
+		h2 {
+			@include font (3rem, 4.1rem, 700, left);
+			font-family: "Nunito-Bold", sans-serif;
+			margin-bottom: 0.3rem;
+
+			@include media (xl) {
+				@include font (2.6rem, 3.5rem);
+			}
+		}
+
+		p {
+			@include font (2.4rem, 3.3rem, 600, left);
+			font-family: "Nunito-SemiBold", sans-serif;
+
+			@include media (xl) {
+				@include font (2.2rem, 3rem);
+			}
+		}
+	}
+
+	// .measuring__box
+	&__box {
+		@include flex ($flex-direction: column);
+		width: 100%;
+
+		h2 {
+			@include font (3rem, 4.1rem, 600, left);
+			font-family: "Nunito-SemiBold", sans-serif;
+		}
+	}
+
+	// форма
+	.form {
+		@include flex (space-between, $flex-wrap: wrap);
+		gap: 1rem 2.5rem;
+		margin-top: 1.5rem;
+
+
+		input[type="text"] {
+			@include font (1.4rem, 1.9rem, 400);
+			font-family: "Nunito-Regular", sans-serif;
+			color: rgba(0, 0, 0, 0.3);
+		}
+
+		input {
+			background: #fff;
+			border-radius: 5px;
+			max-width: 18rem;
+			width: 45%;
+			// height: 4.1rem;
+			border: none;
+			outline: none;
+			padding: 1rem;
+
+			@include media (xl) {
+				max-width: 14.5rem;
+			}
+
+			&:first-child {
+				// @media (min-width: 1244px) {
+				// 	order: 0;
+				// }
+			}
+
+			&:last-child {
+				// @media (min-width: 1244px) {
+				// 	order: 1;
+				// }
+			}
+		}
+
+		.btn-modal {
+			height: 4.5rem;
+			max-width: 12.9rem;
+			@include font (1.8rem, 2.5rem);
+		}
+	}
+
+
+	// чекбокс
+	// .form__policy
+	.form__policy {
+		width: 100%;
+		@include flex (flex-start, center);
+		order: 3;
+
+		label[for="chec"],
+		label[for="chec2"] {
+			cursor: pointer;
+			display: block;
+			width: 100%;
+			padding-left: 2.5rem;
+			position: relative;
+
+			&::before {
+				@include pseudo;
+				@include wh (1.45rem);
+				@include pos (absolute, $top: 0.5rem, $left: 0);
+				border: solid 0.1rem #2F3B3F;
+				border-radius: 0.2rem;
+				transition: 0.5s;
+
+				@include media (xl) {
+					@include wh (1.3rem);
+				}
+			}
+
+			&::after {
+				@include pseudo;
+				@include wh (0.5rem, 1rem);
+				@include pos (absolute, $top: 0.6rem, $left: 0.45rem);
+				border-right: solid 0.2rem transparent;
+				border-bottom: solid 0.2rem transparent;
+				transform: rotate(42deg);
+				transition: 0.5s;
+			}
+		}
+
+		input:checked+label::after {
+			border-right: solid 0.2rem #2F3B3F;
+			border-bottom: solid 0.2rem #2F3B3F;
+			transform: rotate(42deg);
+			transition: 0.5s;
+		}
+
+		input:checked+label::before {
+			border: 1px solid #2F3B3F;
+			transition: 0.5s;
+		}
+
+		input:not(:checked),
+		input:checked {
+			display: none;
+		}
+
+		label {
+			@include font (1.4rem, 2.5rem, 300, left);
+			font-family: "Nunito-Light", sans-serif;
+			color: rgba(0, 0, 0, 0.5);
+			width: 100%;
+			max-width: 37rem;
+
+			@include media (xl) {
+				@include font (1.2rem, 1.6rem);
+			}
+
+			a {
+				color: #2f3b3f;
+				border-bottom: 1px solid #2f3b3f;
+				transition: all 0.3s;
+				font-family: "Nunito-Regular", sans-serif;
+				font-weight: 400;
+			}
+
+			&:hover,
+			&:focus {
+				a {
+					border-bottom: 1px solid transparent;
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+}

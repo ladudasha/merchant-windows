@@ -1,0 +1,188 @@
+.banner {
+	padding: 8rem 0 8.5rem;
+
+	@include media (xl) {
+		padding: 5.5rem 0 7.5rem;
+	}
+
+	// .banner__grid
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		position: relative;
+	}
+
+	&__box {
+		position: relative;
+		min-width: 85.2rem;
+
+		@include media (xl) {
+			min-width: 61rem;
+			max-width: 61rem;
+		}
+	}
+
+	// .banner__content
+	&__content {
+		background-color: #83AEAD;
+		grid-area: 1 / 1 / 2 / 3;
+		max-width: 58rem;
+		border-radius: 0.5rem;
+		z-index: 1;
+		align-self: center;
+		padding: 3.8rem 7rem 4.1rem 14rem;
+		@include pos (absolute, $top: 50%, $left: -15rem);
+		transform: translate(-50%, -50%);
+
+		@include media (xl) {
+			max-width: 49.7rem;
+			padding: 2.2rem 8rem 2.3rem 4.7rem;
+			top: 50%;
+			left: -11.2rem;
+		}
+	}
+
+
+	h1 {
+		margin: 0;
+		margin-bottom: 5rem;
+		position: relative;
+		@include font (5rem, 6.8rem, 700, left);
+		font-family: "Nunito-Bold", sans-serif;
+		color: #FFF;
+
+		@include media (xl) {
+			@include font (4rem, 5.5rem);
+			margin-bottom: 2.8rem;
+
+			&::after {
+				bottom: -1rem;
+			}
+		}
+
+		&::after {
+			@include pseudo;
+			@include pos (absolute, $bottom: -3.4rem, $left: 0);
+			@include wh (30rem, 0.1rem);
+			background-color: #FFF;
+		}
+
+		&::after:hover {
+			background-color: #116988;
+			transition: all 0.5s;
+		}
+	}
+
+	h2 {
+		@include font (4rem, 5.5rem, 700, left);
+		font-family: "Nunito-Bold", sans-serif;
+		color: #FFF;
+
+		@include media (xl) {
+			@include font (3rem, 4.1rem);
+		}
+	}
+
+	// .banner__box
+	&__box {
+		grid-area: 1 / 2 / 2 / 4;
+	}
+
+	// .banner__img
+	&__img {
+
+		z-index: -1;
+		max-width: 85.2rem;
+
+		// @include wh(85.2rem, 57.2rem);
+		@include media (xl) {
+			max-width: 61rem;
+
+			img {
+				max-height: 36.4rem;
+			}
+
+		}
+
+		&::after {
+			@include pseudo;
+			@include pos (absolute, $bottom: -1.8rem, $left: -2.5rem);
+			@include wh (10.3rem, 8.9rem);
+			border: 2px solid #83AEAD;
+			border-radius: 10px;
+			z-index: -1;
+
+			@include media (xl) {
+				@include wh (8.3rem, 6.3rem);
+			}
+		}
+	}
+
+	.banner__link {
+		@include pos (absolute, $bottom:-6.3rem, $right:-7.2rem);
+		@include wh (100%, 8.9rem);
+		max-width: 10.3rem;
+		background-color: #83AEAD;
+		border: 3px solid #83AEAD;
+		border-radius: 10px;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-image: url(../img/icons/arrow-white.svg);
+		transform: translate(-50%, -50%);
+
+		&:hover,
+		&:focus {
+			background-color: #116988;
+			border-color: #116988;
+
+		}
+
+		@include media (xl) {
+			height: 6.3rem;
+			max-width: 8.3rem;
+			bottom: -4.2rem;
+			right: -6rem;
+		}
+	}
+}
+
+.banner-about {
+.container {
+	align-items: flex-end;
+}
+	// .banner__content
+	&__content {
+
+		padding: 4.1rem 7rem 4.1rem 14.7rem;
+
+		@include media (xl) {
+			max-width: 49.7rem;
+			padding: 2.2rem 8rem 2.3rem 4.7rem;
+			top: 50%;
+			left: -11.2rem;
+		}
+	}
+
+	h1 {
+		margin-bottom: 0;
+
+		&::after {
+			display: none;
+		}
+	}
+	.banner__text {
+		@include flex ($flex-direction: column);
+		margin-top: 9.2rem;
+		max-width: 85.2rem;
+		gap: 5rem;
+		grid-area: 2/2/2/4;
+	}
+	p{
+		@include font (2.4rem, 3.2rem, 400, left);
+		font-family: "Nunito-Regular", sans-serif;
+		color: #2F3B3F;
+		
+	}
+
+}
+

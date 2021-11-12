@@ -1,0 +1,51 @@
+// Переменные
+@import "./../scss/global/variables";
+
+// Миксины
+@import "./../scss/global/mixins";
+
+// Сброс дефолтных стилей браузера (дополнительный)
+@import "./../scss/global/global";
+
+// Основные стили
+@import "./../scss/global/base";
+
+// Размеры шрифтов повторяющихся элементов (h1, заголовки секций и т.д.)
+@import "./../scss/global/typography";
+
+// Общие стили для кнопок
+@import "./../scss/global/btns";
+
+// Общие стили для инпутов, чекбоксов и т.д.
+@import "./../scss/global/inputs";
+
+// Общие стили для секций (паддинги и т.д.)
+@import "./../scss/global/sections";
+
+// Плагины
+@import "./../scss/libs/swiper-bundle.min"; // Слайдер
+
+// Хедер
+@import "./../components/sections/header/header";
+
+// Футер
+// @import "./../components/sections/footer/footer";
+
+// БЭМ-блоки
+@import "./../components/bem-blocks/accordion/accordion"; // Аккордион
+@import "./../components/bem-blocks/svg-txt/svg-txt"; // 2 секция главная
+@import "./../components/bem-blocks/menu/menu-top"; // меню в шапке
+@import "./../components/bem-blocks/menu/menu-mobile"; // меню мобильное
+@import "./../components/bem-blocks/socials/socials"; // социальные кнопки
+
+// Секции
+@import "./../components/sections/banner-home/banner-home";
+@import "./../components/sections/why-we/why-we";
+@import "./../components/sections/discounts/discounts";
+@import "./../components/sections/about/about";
+@import "./../components/sections/principles/principles";
+@import "./../components/sections/catalog/catalog";
+@import "./../components/sections/measuring/measuring";
+@import "./../components/sections/reviews/reviews";
+@import "./../components/sections/feedback/feedback";
+@import "./../components/sections/footer/footer";

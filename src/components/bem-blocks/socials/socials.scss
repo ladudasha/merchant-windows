@@ -1,0 +1,32 @@
+.social {
+	@include flex (space-between, center);
+	gap: 5.5rem;
+	max-width: 21.4rem;
+	border-top: 1px solid #2F3B3F;
+	padding-top: 2.5rem;
+	align-self: flex-start;
+	margin-left: 2rem;
+
+	li {
+		width: 3.5rem;
+		height: 3.5rem;
+	}
+
+	a {
+		svg {
+			fill: transparent;
+			stroke: #2F3B3F;
+		}
+
+		&:hover,
+		&:focus {
+			svg {
+				transform: scale(1.2) rotateY(-45deg);
+				animation-name: social;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+			}
+		}
+	}
+}

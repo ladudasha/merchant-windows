@@ -1,0 +1,58 @@
+.menu-top {
+	display: none;
+	@include media (xlg) {
+		display: block;
+	}
+
+	ul {
+		@include flex (space-between, center);
+		gap: 5.9rem;
+	}
+
+	a {
+		@include font(1.6rem, 2.2rem, 700);
+		font-family: "Nunito-Bold", sans-serif;
+		color: #2F3B3F;
+		position: relative;
+		transition: all 0.3s;
+
+
+		&::after {
+			@include pseudo;
+			@include pos (absolute, $bottom: 0, $left: 0);
+			@include wh(100%, 0.1rem);
+			transform: scaleX(0);
+			transition: all 0.3s;
+			background-color: #116988;
+		}
+	}
+
+	li {
+
+		&:hover,
+		&:focus {
+			a {
+				color: #2F3B3F;
+				transition: all 0.3s;
+
+				&::after {
+					transform: scaleX(1);
+					transition: all 0.3s;
+				}
+			}
+		}
+	}
+
+	.active {
+		color: #2F3B3F;
+		pointer-events: none;
+		/* делаем ссылку некликабельной */
+		cursor: default;
+
+		/* устанавливаем курсор в виде стрелки */
+		&::after {
+			transform: scaleX(1);
+			transition: all 0.3s;
+		}
+	}
+}

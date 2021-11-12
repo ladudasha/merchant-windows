@@ -1,0 +1,152 @@
+.catalog {
+	padding-bottom: 10rem;
+
+	@include media (xl) {
+		padding-bottom: 6rem;
+	}
+
+	h2 {
+		position: relative;
+		padding-left: 19.8rem;
+		margin-bottom: 7rem;
+
+		@include media (xlg) {
+			margin-bottom: 3rem;
+		}
+
+		&::after {
+			@include pseudo;
+			@include wh (16.6rem, 0.2rem);
+			@include pos (absolute, $bottom: 2.7rem, $left: 0);
+			background-color: rgba(24, 24, 24, 0.5);
+		}
+	}
+
+	// .catalog__box
+	&__box {
+		width: 100%;
+		@include flex (space-between, center);
+		gap: 3rem;
+	}
+
+	// .catalog__card
+	&__card {
+		@include flex ($flex-direction: column);
+		background-color: #83AEAD;
+
+		@include media (xlg) {
+			&:last-child {
+				display: none;
+			}
+		}
+
+
+	}
+
+	// .catalog__card-box-img
+	&__card-box-img {
+		max-height: 36.2rem;
+		border-radius: 5px 5px 0px 0px;
+
+		@include media (xlg) {
+			max-height: 42rem;
+		}
+	}
+
+	// .catalog__content
+	&__content {
+		@include flex ($flex-direction: column);
+		padding: 1.2rem 1rem 1rem 2rem;
+
+		@include media (xlg) {
+
+			padding: 3rem 2.2rem 2.5rem 2.4rem;
+		}
+
+		h3 {
+			@include font (2.4rem, 3.3rem);
+			max-width: 30.5rem;
+			margin-bottom: 0.5rem;
+
+			@include media (xlg) {
+				max-width: 40rem;
+			}
+		}
+
+		span {
+			@include font (1.8rem, 2.5rem, 300);
+			font-family: "Nunito-Light", sans-serif;
+			color: rgba(255, 255, 255, 0.5);
+		}
+
+	}
+
+	// .catalog__options
+	&__options {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 1rem 3rem;
+		margin: 3rem 0;
+
+		@include media (xlg) {
+			margin: 2.2rem 0 3.5rem;
+		}
+	}
+
+	// .catalog__parametr
+	&__parametr {
+		@include flex (space-between, center);
+
+		span {
+			@include font (1.8rem, 2.5rem, 400);
+			font-family: "Nunito-Regular", sans-serif;
+			color: rgba(255, 255, 255, 0.8);
+		}
+
+		strong {
+			@include font (1.8rem, 2.5rem, 700);
+			font-family: "Nunito-Bold", sans-serif;
+			color: #FFF;
+		}
+	}
+
+	// .catalog__price
+	&__price {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 5rem;
+
+		h3 {
+			@include font (3.5rem, 3.2rem);
+		}
+
+		span {
+			@include font (1.8rem, 2.4rem, 300);
+			font-family: "Nunito-Light", sans-serif;
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+
+	.btn-modal {
+		height: 4.5rem;
+		max-width: 14.6rem;
+		@include font (1.8rem, 2.5rem);
+		grid-area: 1 / 2 / 3 / 3;
+		align-self: end;
+
+		@include media (xlg) {
+			height: 5.5rem;
+			max-width: 18.1rem;
+		}
+	}
+
+	.btns {
+		align-self: flex-end;
+		margin-top: 2.7rem;
+		margin-right: 2.9rem;
+
+		@include media (xlg) {
+			margin-right: 1.9rem;
+		}
+	}
+}

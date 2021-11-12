@@ -1,0 +1,202 @@
+.principles {
+	padding: 12.5rem 0 15.5rem;
+
+	@include media (xl) {
+		padding-bottom: 9rem;
+	}
+
+	h2 {
+		position: relative;
+		padding-left: 19.8rem;
+		margin-bottom: 7rem;
+
+		&::after {
+			@include pseudo;
+			@include wh (16.6rem, 0.2rem);
+			@include pos (absolute, $bottom: 2.7rem, $left: 0);
+			background-color: rgba(24, 24, 24, 0.5);
+		}
+	}
+
+	// .principles__flex
+	&__flex {
+		display: flex;
+		gap: 3rem;
+	}
+
+	// .principles__box-content
+	&__box-content {
+		@include flex ($flex-direction: column);
+	}
+
+	h3 {
+		@include font (3rem, 4.1rem, $text-align: left);
+		color: #2F3B3F;
+		margin-bottom: 4.7rem;
+
+		@include media (xlg) {
+			@include font (2.4rem, 3.3rem);
+			margin-bottom: 3.8rem;
+		}
+	}
+
+	// .princioles__box-img
+	&__box-img {
+		position: relative;
+
+		img {
+			width: 55.8rem;
+			border-radius: 5px;
+
+			@include media (xlg) {
+				width: 37rem;
+				height: 51.4rem;
+			}
+		}
+
+		&::after {
+			@include pseudo;
+			@include pos (absolute, $bottom: -1.8rem, $left: -2.5rem);
+			@include wh (13.2rem);
+			border: 2px solid #83AEAD;
+			border-radius: 10px;
+			z-index: -1;
+
+			@include media (xlg) {
+				@include wh (8.3rem, 6.3rem);
+				bottom: 1rem;
+				left: -1.6rem;
+			}
+		}
+	}
+
+
+
+	.svg-txt__block+.svg-txt__block {
+		position: relative;
+
+		&::after {
+			@include pseudo;
+			@include wh (0.1rem, 11rem);
+			@include pos (absolute, $top: -12.8rem, $left: 3rem);
+			background-color: #83AEAD;
+
+			@include media (xlg) {
+				height: 5rem;
+				top: -7.3rem;
+			}
+		}
+	}
+
+	.svg-txt {
+		padding: 0;
+		gap: 8.3rem;
+
+		@include media (xlg) {
+			gap: 5.4rem;
+		}
+
+		// .svg-txt__block
+		&__block {
+			display: flex;
+			gap: 3rem;
+			max-width: 60rem;
+
+			&:hover,
+			&:focus {
+				transition: all 1s;
+
+				.svg-txt__block-svg {
+					animation: svg2 1s linear;
+				}
+
+				/********svg*******/
+				svg {
+					display: inline-block;
+					height: 100%;
+					transition: all 1s;
+					fill: #fff;
+					animation: svg2 1s linear;
+					transform: scale(1);
+				}
+			}
+		}
+
+
+
+		// .svg-txt__block-svg
+		&__block-svg {
+			@include wh (6.8rem);
+			border-radius: 50%;
+			background-color: #83AEAD;
+			box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+			@include flex (center, center);
+			transition: all 1s;
+
+			&:hover,
+			&:focus {
+				transition: all 1s;
+				animation: svg2 1s linear;
+
+				svg {
+					animation: svg2 1s linear;
+				}
+			}
+
+			svg {
+				fill: #FFF;
+				max-width: 8rem;
+				height: 8rem;
+			}
+		}
+
+		// .svg-txt__content
+		&__content {
+			@include flex ($flex-direction: column);
+			gap: 3rem;
+
+			@include media (xlg) {
+				gap: 2.5rem;
+			}
+
+			h4 {
+				@include media (xlg) {
+					@include font (2.4rem, 3.3rem);
+				}
+			}
+
+			p {
+				@include font (2.2rem, 3rem);
+				max-width: 37.5rem;
+
+				@include media (xlg) {
+					@include font (1.8rem, 2.5rem);
+					max-width: 30rem;
+				}
+			}
+		}
+	}
+}
+
+/***********Анимация для svg **************/
+@keyframes svg2 {
+	0% {
+		fill: #fff;
+		transform: scale(1.01);
+	}
+
+	35% {
+		fill: #fff;
+		transform: scale(1.5);
+	}
+
+	75% {
+		fill: #fff;
+		transform: scale(1.01);
+	}
+
+	100% {
+		fill: #fff;
+		transform: scale(1);
+	}
+}

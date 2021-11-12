@@ -1,0 +1,170 @@
+.footer {
+
+	// .footer__content
+	&__content {
+		width: 100%;
+		background-color: #83AEAD;
+		padding: 14.1rem 0 4rem;
+
+		li,
+		a {
+			@include font (1.4rem, 1.9rem, 400);
+			font-family: "Nunito-Regular", sans-serif;
+			color: rgba(47, 59, 63, 0.8);
+			transition: all 0.4s;
+		}
+
+		a {
+
+			&:hover,
+			&:focus {
+				color: rgba(47, 59, 63, 0.8);
+				transition: all 0.4s;
+			}
+		}
+
+		svg {
+			fill: transparent;
+			stroke: #2F3B3F;
+			@include wh (100%);
+			transition: all 0.5s;
+		}
+	}
+
+	a {
+		width: 100%;
+
+		span {
+			display: none;
+
+			@media (min-width: 1024px) {
+				display: inline;
+			}
+		}
+	}
+
+	// .footer__wrapper
+	&__wrapper {
+		@include flex (space-between, $flex-wrap: wrap);
+		gap: 12.2rem;
+		width: 100%;
+
+		@include media (xl) {
+			gap: 5rem;
+		}
+	}
+
+	// .footer__flex
+	&__flex {
+		@include flex ($flex-direction: column);
+
+		h5 {
+			@include font(1.8rem, 2.5rem, 700);
+			font-family: "Nunito-Bold", sans-serif;
+			color: #2F3B3F;
+			margin-bottom: 3rem;
+		}
+
+	}
+
+	// .footer__about
+	&__about {
+		@include flex ($flex-direction: column);
+		gap: 2rem;
+
+		li {
+			&:first-child {
+				a {
+					border-bottom: 1px solid rgba(47, 59, 63, 0.8);
+					transition: all 0.4s;
+					width: auto;
+
+					&:hover,
+					&:focus {
+						border-bottom: 1px solid transparent;
+						transition: all 0.4s;
+					}
+				}
+			}
+		}
+	}
+
+	// .footer__shoppers
+	&__shoppers {
+		@include flex ($flex-direction: column);
+		gap: 2.8rem;
+	}
+
+	// .footer__contact
+	&__contact {
+		@include flex ($flex-direction: column);
+		gap: 2rem;
+
+		li {
+			a {
+				display: flex;
+				align-items: center;
+				gap: 2rem;
+
+				&:hover,
+				&:focus {
+					svg {
+						transition: all 0.3s;
+						fill: #2F3B3F;
+						stroke: #2F3B3F;
+						transform: rotate(0deg);
+						animation-name: svg-contact;
+						animation-duration: 1s;
+						animation-timing-function: linear;
+						animation-iteration-count: infinite;
+					}
+				}
+			}
+		}
+
+		svg {
+			@include wh (2rem);
+			transition: all 0.3s;
+			fill: rgba(47, 59, 63, 0.8);
+			stroke: rgba(47, 59, 63, 0.8);
+		}
+	}
+
+	.btn-modal {
+		height: 6rem;
+		max-width: 16.6rem;
+		@include font (1.8rem, 2.5rem);
+		margin-top: 8.2rem;
+		align-self: flex-end;
+	}
+
+	.social {
+		border-top: none;
+		padding-top: 0;
+		margin-left: 0;
+	}
+
+
+
+	/***********Анимация для svg **************/
+	@keyframes svg-contact {
+		0% {
+			transform: rotate(-15deg);
+		}
+
+		100% {
+			transform: rotate(35deg);
+		}
+	}
+
+	@keyframes social {
+		0% {
+			transform: scale(1.2) rotateY(-55deg);
+		}
+
+		100% {
+			transform: scale(1.1) rotateY(55deg);
+		}
+	}
+
+}

@@ -1,0 +1,84 @@
+.svg-txt {
+	@include flex(space-between, $flex-wrap: wrap);
+	width: 100%;
+	gap: 3rem;
+	padding: 7.2rem 0 0;
+
+	// .svg-txt__block
+	&__block {
+		max-width: 36rem;
+		@include flex ();
+		gap: 3rem;
+
+		&:hover,
+		&:focus {
+			transition: all 1s;
+
+			/********svg*******/
+			svg {
+				display: inline-block;
+				height: 100%;
+				transition: all 1s;
+				fill: #83AEAD;
+				animation: svg 1s linear;
+			}
+		}
+
+		@include media (xl) {
+			max-width: 30rem;
+		}
+
+		@include media (xlg) {
+			max-width: 25rem;
+		}
+	}
+
+	// .svg-txt__block-svg
+	&__block-svg {
+		transition: all 1s;
+		fill: #3D626F;
+	}
+
+	svg {
+		max-width: 3.5rem;
+		transition: all 1s;
+		height: 100%;
+	}
+
+	&__content {
+		@include flex ($flex-direction: column);
+		gap: 1.8rem;
+	}
+
+	h4 {
+		@include font (3rem, 3rem);
+	}
+
+	p {
+		@include font (2rem, 2.7rem);
+		color: rgba(47, 59, 63, 0.8);
+	}
+}
+
+/***********Анимация для svg **************/
+@keyframes svg {
+	0% {
+		fill: #83AEAD;
+		transform: scale(1.01);
+	}
+
+	35% {
+		fill: #83AEAD;
+		transform: scale(1.5);
+	}
+
+	75% {
+		fill: #83AEAD;
+		transform: scale(1.01);
+	}
+
+	100% {
+		fill: #83AEAD;
+		transform: scale(1);
+	}
+}

@@ -1,0 +1,26 @@
+h2 {
+    @include font (4rem, 5.5rem, 800, left);
+    font-family: "Nunito-ExtraBold", sans-serif;
+    color: #2F3B3F;
+    align-self: flex-start;
+}
+
+h3 {
+    font-weight: 700;
+    font-family: "Nunito-Bold", sans-serif;
+    color: #FFF;
+}
+
+h4 {
+    @include font (3rem, 4.1rem, 700, left);
+    font-family: "Nunito-Bold", sans-serif;
+    color: #2F3B3F;
+}
+
+p {
+    font-weight: 400;
+    text-align: left;
+    font-family: "Nunito-Regular", sans-serif;
+    color: #2F3B3F;
+
+}

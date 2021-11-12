@@ -1,0 +1,101 @@
+.discounts {
+	&__wrapper {
+		width: 100%;
+		display: flex;
+	}
+
+	.container {
+		max-width: 144rem;
+		padding-left: 0;
+	}
+
+	&__box-img {
+		img {
+			min-width: 50.9rem;
+		}
+
+		@include media (xl) {
+			img {
+				max-width: 50.9rem;
+			}
+		}
+
+		@include media (xlg) {
+			img {
+				max-width: 33.7rem;
+			}
+		}
+	}
+
+	/** discounts__filling **/
+	&__filling {
+		width: 100%;
+		padding: 4.7rem 11.9rem 5rem 2.8rem;
+		max-width: 119.9rem;
+		position: relative;
+
+		@include media (xl) {
+			padding: 2.2rem 5rem 1.8rem 2.8rem;
+		}
+
+		@include media (xlg) {
+			padding: 2.2rem 5rem 1.8rem 2.8rem;
+			max-width: 68.7rem;
+		}
+
+
+	}
+
+	h2 {
+		@include font (5rem, 6.8rem, 700, left);
+		font-family: "Nunito-Bold", sans-serif;
+		margin-bottom: 5.3rem;
+		color: #fff;
+
+		@include media (xl) {
+			@include font (3.5rem, 4.8rem);
+
+		}
+	}
+
+	h3 {
+		@include font (3.5rem, 4.8rem, 600);
+		font-family: "Nunito-SemiBold", sans-serif;
+		color: rgba(255, 255, 255, 0.8);
+		margin-bottom: 6.3rem;
+
+		@include media (xl) {
+			@include font (2.5rem, 3.4rem);
+			margin-bottom: 4.7rem;
+		}
+	}
+
+	.btn-modal {
+		height: 8.1rem;
+		max-width: 24.8rem;
+		@include font (2rem, 2.3rem, 400);
+		font-family: "Roboto-Regular", sans-serif;
+		@include pos (absolute, $bottom: 6.3rem, $right: 13.3rem);
+
+		@include media (xl) {
+			@include pos (absolute, $bottom: 15rem, $right: 7rem);
+			max-width: 18.4rem;
+			height: 6rem;
+			@include font (1.5rem, 1.8rem);
+		}
+
+		@include media (xlg) {
+
+			@include pos (absolute, $bottom: -11rem, $right: 3.2rem);
+		}
+	}
+
+	p {
+		@include font (3rem, 4.1rem);
+		color: rgba(255, 255, 255, 0.6);
+
+		@include media (xl) {
+			@include font (1.8rem, 2.5rem);
+		}
+	}
+}

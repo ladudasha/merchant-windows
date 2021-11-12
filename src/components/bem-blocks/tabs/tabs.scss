@@ -1,0 +1,169 @@
+/* базовый контейнер вкладок(табов) */
+.tabs-box {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.tabs-windows {
+}
+.tabs {
+}
+.tab {
+}
+.tab--active {
+}
+// /* базовый контейнер вкладок(табов) */
+// .tabs-box {
+//     display: inline-block;
+//     position: relative;
+//     width: 100%;
+//     h2 {
+//         font-family: "Anticva-Regular";
+//         font-style: normal;
+//         font-weight: normal;
+//         font-size: 3rem;
+//         line-height: 3.6rem;
+//         color: #609cb0;
+//         margin-top: 1.5rem;
+//         margin-bottom: 0;
+//         max-width: max-content;
+//     }
+//     &__btns {
+//         width: 100%;
+//     }
+// }
+// /* панель вкладок */
+// .tabs {
+//     display: none;
+//     @media (min-width: 1024px) {
+//         display: flex;
+//         flex-wrap: wrap;
+//         align-items: flex-start;
+//         justify-content: center;
+//         gap: 3rem;
+//     }
+//     @media (min-width: 1400px) {
+//         gap: 4.5rem;
+//     }
+// }
+// /* вкладка */
+// .tab {
+//     cursor: pointer;
+//     position: relative;
+//     width: 22.7%;
+//     border-radius: 5px;
+//     border: 1px solid #609cb0;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     padding: 1.4rem 1.8rem;
+//     gap: 0.5rem;
+
+//     @media (min-width: 1400px) {
+//         width: 22.5%;
+//         gap: 3.5rem;
+//     }
+//     @media (min-width: 1668px) {
+//         width: 22.94%;
+//     }
+//     &::after {
+//         position: absolute;
+//         content: "";
+//         right: 0;
+//         top: -0.2%;
+//         width: 0%;
+//         height: 100%;
+//         background: #609cb0;
+//         opacity: 1;
+//         transition: width 0.4s ease-in-out;
+//         z-index: -1;
+//         border-radius: 5px;
+//     }
+//     p {
+//         color: #2f3b3f;
+//         @media (min-width: 1024px) {
+//             font-size: 2rem;
+//         }
+//     }
+//     span {
+//         width: 2.9rem;
+//         height: 2.9rem;
+//         @media (min-width: 1400px) {
+//             width: 6.8rem;
+//             height: 6.8rem;
+//         }
+//         svg {
+//             width: 100%;
+//             height: 100%;
+//             object-fit: contain;
+//             fill: #609cb0;
+//         }
+//     }
+//     /* стили активных вкладок */
+//     &--active {
+//         p {
+//             color: #ffffff;
+//         }
+//         &::after {
+//             width: 100.5%;
+//             left: 0;
+//             transition: width 0.4s ease-in-out;
+//             border: 1px solid #609cb0;
+//             @media (min-width: 1024px) {
+//                 width: 100%;
+//             }
+//         }
+//     }
+// }
+// .tab.tab--active {
+//     border: 1px solid transparent;
+//     span svg {
+//         fill: #ffffff;
+//     }
+// }
+// .tab.tab--gray {
+//     @media (min-width: 1024px) {
+//         width: 25.8%;
+//     }
+//     @media (min-width: 1400px) {
+//         width: 26.8%;
+//     }
+//     @media (min-width: 1668px) {
+//         width: 27.87%;
+//     }
+// }
+// .tab--gray.tab--active::after {
+//     background: #2f3b3f;
+// }
+// // обертка содержимого табов + кнопки
+// .tab__container {
+//     @media (min-width: 1024px) {
+//         width: 100%;
+//         display: flex;
+//         justify-content: space-between;
+//     }
+// }
+
+// /*обертка для кнопок*/
+// .tab__container-btn {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 2.4rem;
+//     @media (min-width: 1024px) {
+//         width: 25.8%;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: flex-end;
+//     }
+//     @media (min-width: 1400px) {
+//         width: 26.8%;
+//     }
+//     @media (min-width: 1668px) {
+//         width: 27.87%;
+//     }
+//     button {
+//         width: 47%;
+//         padding: 1.4rem 1rem;
+//     }
+// }

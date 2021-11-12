@@ -1,0 +1,67 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "webpack5_gulp4_pattern",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "browserslist": "> 1%, not dead",
+  "author": "Demchenko Vyacheslav <frontend-ninja@yandex.ru>",
+  "keywords": [
+    "js",
+    "javascript",
+    "webpack"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.9",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.27.5",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-htmlhint": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.3",
+    "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^4.0.1",
+    "gulp-webp": "^4.0.1",
+    "htmlhint-stylish": "^1.0.3",
+    "imagemin-jpeg-recompress": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "node-sass": "^6.0.1",
+    "node-sass-magic-importer": "^5.3.2",
+    "sass": "^1.37.0",
+    "svgxuse": "^1.2.6",
+    "webpack": "^5.47.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-stream": "^6.1.2"
+  },
+  "dependencies": {
+    "core-js": "^3.16.0",
+    "normalize": "^0.3.1",
+    "npm-git-install": "^0.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://egor_sabancev@bitbucket.org/egor_sabancev/balcony-windows.git"
+  },
+  "homepage": "https://bitbucket.org/egor_sabancev/balcony-windows#readme"
+}

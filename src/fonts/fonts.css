@@ -1,0 +1,60 @@
+/* FONTS */
+
+/* @font-face {
+  font-family: 'Century Gothic';
+  src: url('../fonts/century-gothic/century-gothic.svg#CenturyGothic') format('svg'),
+       url('../fonts/century-gothic/century-gothic.ttf') format('truetype'),
+       url('../fonts/century-gothic/century-gothic.woff') format('woff'),
+       url('../fonts/century-gothic/century-gothic.eot'),
+       url('../fonts/century-gothic/century-gothic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/century-gothic/century-gothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+} */
+
+@font-face {
+  font-family: "Anticva-Regular";
+  src: url("../fonts/Anticva/Anticva-Regular.woff") format("woff"),
+    url("../fonts/Anticva/Anticva-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-ExtraBold";
+  src: url("../fonts/Nunito-ExtraBold.woff") format("woff"), url("../fonts/Nunito-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito-Bold";
+  src: url("../fonts/Nunito-Bold.woff") format("woff"), url("../fonts/Nunito-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito-SemiBold";
+  src: url("../fonts/Nunito-SemiBold.woff") format("woff"), url("../fonts/Nunito-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito-Regular";
+  src: url("../fonts/Nunito-Regular.woff") format("woff"), url("../fonts/Nunito-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito-Light";
+  src: url("../fonts/Nunito-Light.woff") format("woff"), url("../fonts/Nunito-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}

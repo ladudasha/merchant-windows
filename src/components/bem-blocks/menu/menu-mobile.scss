@@ -1,0 +1,105 @@
+// мобильное меню
+.menu-mobile {
+	display: none;
+	border: 1px solid #2F3B3F;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0.5rem;
+	border-bottom-left-radius: 0.5rem;
+
+
+	&__phone {
+		margin-bottom: 2rem;
+		@include flex ($flex-direction: column);
+		padding-left: 2rem;
+
+		&:hover,
+		&:focus {
+			a {
+				color: #83AEAD;
+				text-shadow: -0 -1px 0 #83AEAD, 0 -1px 0 #83AEAD, -0 1px 0 #83AEAD, 0 1px 0 #83AEAD, -1px -0 0 #83AEAD,
+					1px -0 0 #83AEAD, -1px 0 0 #83AEAD, 1px 0 0 #83AEAD, -1px -1px 0 #83AEAD, 1px -1px 0 #83AEAD,
+					-1px 1px 0 #83AEAD, 1px 1px 0 #83AEAD, -1px -1px 0 #83AEAD, 1px -1px 0 #83AEAD, -1px 1px 0 #83AEAD,
+					1px 1px 0 #83AEAD;
+			}
+		}
+
+
+		span {
+			@include font (1.6rem, 1.9rem, 400);
+			font-family: "Roboto-Regular", sans-serif;
+			color: rgba(49, 45, 45, 0.44);
+		}
+
+		a {
+			@include font (1.6rem, 1.9rem, 400);
+			font-family: "Roboto-Regular", sans-serif;
+			color: #2F2626;
+		}
+	}
+	
+
+	&--open {
+		@include pos (absolute, 3.5rem, 0, $right: 0);
+		@include flex ($flex-direction: column);
+		@include wh (29.3rem, 58.8rem);
+
+		padding-top: 2rem;
+		background-color: #fff;
+
+		@include media (sm) {
+			width: 25rem;
+		}
+
+		.nav-menu {
+			@include flex ($flex-direction: column);
+			margin-bottom: 4.7rem;
+			gap: 2rem;
+			align-self: flex-start;
+			width: 100%;
+		}
+
+		.nav-menu li {
+			width: 100%;
+			transition: all 0.3s;
+
+			svg {
+				fill: #2F3B3F;
+				@include wh (1.5rem);
+				display: inline-block;
+				margin-right: 1rem;
+				transform: translate(0px, 2px);
+			}
+
+			a {
+				@include font (1.4rem, 1.9rem, 400, left);
+				font-family: "Nunito-Regular", sans-serif;
+				color: #211E1E;
+				padding: 1.5rem 0 1.5rem 2rem;
+
+				width: 100%;
+				display: block;
+
+				&:active {
+					border-right: 9px solid #c8f5ff;
+				}
+			}
+
+			&:hover,
+			&:focus {
+				transition: all 0.3s;
+				background: #83AEAD;
+
+				svg {
+					transform: scale(1.2) rotateY(-45deg) translate(0px, 2px);
+					animation-name: social;
+					animation-duration: 1s;
+					animation-timing-function: linear;
+					animation-iteration-count: infinite;
+				}
+			}
+		}
+
+	}
+}
+

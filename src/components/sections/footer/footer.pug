@@ -1,0 +1,88 @@
+footer.footer
+	.footer__content
+		.container
+			.footer__wrapper
+				.footer__flex
+					h5 О компании
+					ul.footer__about
+						li Бесплатная доставка по Москве
+							br
+							a(href='') область 
+								span бесплатной 
+								|доставки
+						li: a(href="") Статьи об окнах
+						li: a(href="") График работы
+				.footer__flex
+					h5 Покупателям
+					ul.footer__shoppers
+						li: a(href="") Цены
+						li: a(href="") Акции
+						li: a(href="") Помощь
+				.footer__flex
+					h5 Контакты
+					ul.footer__contact
+						li.contact: a(href="https://yandex.ru/maps/?rtext=~55.733219,37.713872&amp;rtt=mt" target="_blank")
+							svg(width="20" height="20")
+								use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#location")
+							| ул. Нижегородская, 29-33с7
+						li.tel: a(href="tel:84993501101")
+							svg(width="20" height="20")
+								use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#telephone")
+							| 8(499)350-11-01
+				.footer__flex
+					h5 Присоедининяйся к нам
+					include ./../../bem-blocks/socials/socials.pug
+					button.btn-modal Заказать звонок
+
+
+					
+
+//- footer.footer
+//- 	.container
+//- 		.footer__top
+//- 			h2 Помогите нам стать лучше
+//- 			p Вы можете оставить отзыв о нашем сайте или задать вопрос, чтобы мы могли лучше работать для вас
+//- 			form.footer__form
+//-          	label
+//-             	input._req(type="text" value="" placeholder="")
+//-             button.btn(type="button")
+//- 		.footer__bottom
+//- 			.footer__wrapper
+//- 				.footer__about
+//- 					h5 О компании
+//- 					ul.about
+//- 						li Бесплатная доставка по Москве 
+//-                      br
+//-                      a(href='') область 
+//-                         span бесплатной 
+//-                         |доставки
+//-                   li: a(href="") Статьи об окнах
+//-                   li: a(href="") График работы
+//-             .footer__customers
+//-                 h5 Покупателям
+//-                 ul 
+//-                   li: a(href="") Цены
+//-                   li: a(href="") Акции
+//-                   li: a(href="") Помощь
+//-             .footer__contact
+//-                 h5 Контакты
+//-                 ul 
+//-                   li.contact: a(href="https://yandex.ru/maps/?rtext=~55.733219,37.713872&amp;rtt=mt" target="_blank")
+//-                      svg(width="45" height="45")
+//-                         use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#location") 
+//-                      | 
+
+//-                   li.tel: a(href="tel:84993501101")
+//-                      svg(width="45" height="45")
+//-                         use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#telephone") 
+//-                      | 8(499)350-11-01
+//-             .footer__social 
+//-                 h5 Присоедининяйся к нам
+//-                 ul
+//-                   li: a(href=""): svg(width="45" height="45")
+//-                      use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#vk")
+//-                   li: a(href=""): svg(width="45" height="45")
+//-                      use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#od") 
+//-                   li: a(href=""): svg(width="45" height="45")
+//-                      use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#instagram") 
+//-                 button.btn Заказать звонок
