@@ -1,230 +1,207 @@
 .header {
-    padding: 0.2rem 0;
-    z-index: 3;
-
+    .container {
+        @extend %container;
+    }
+    padding: 2.3rem 0;
+    background-color: black;
     @include media (xlg) {
-        padding: 0.8rem 0;
+        padding: 2.0rem 0;
     }
-
-    // .header__flex
-    &__flex {
-        @include flex (space-between, center);
-        width: 100%;
-        padding: 0 1.5rem;
-    }
-
-    // .header__logo
     &__logo {
-        @include wh (6.6rem, 1.6rem);
-
-        @media (min-width: 1024px) {
-            height: 2.4rem;
-        }
-        
-    @include media (xlg) {
-       
-        @include wh (11rem, 2.4rem);
-    }
-
-    @include media (xxl) {
-        height: 2.7rem;
-    }
-
         svg {
             @include wh (100%);
-            fill: #2F3B3F;
+            fill: white;
         }
-    }
-
-
-
-    /***** форма поиска ********/
-
-
-    // .header__form 
-    &__form {
-        width: 1.5rem;
-        position: relative;
-
-        &::after {
-            @include pseudo;
-            @include background(url("../img/icons/search.svg"));
-            @include wh(1.5rem);
-            @include pos(absolute, $top: 0, $left: 0);
-
-        }
-
-        input[type="text"] {
-            color: #2f3b3f;
-        }
-
-        input {
-            background-image: none !important;
-            width: 100%;
-            outline: none;
-            border: none;
-        }
-
-        button {
-            display: none;
-        }
-
-        &.active {
-            width: 24rem;
-            padding: 0.7rem 10px 0.7rem 3.4rem;
-            border: 1px solid #2F3B3F;
-            border-radius: 5px;
-
-            @include media (lg) {
-                margin: 0 1rem;
-            }
-
-            &::after {
-                @include pos(absolute, $top: 7px, $left: 11px);
-
-            }
-
-            button {
-                display: block;
-                @include wh(3.5rem, 3rem);
-                border-radius: 5px;
-                background-color: #2f3b3f;
-                outline: none;
-                transition: all 0.3s;
-                @include pos (absolute, $top: 3px, $right: 3px);
-
-                &:hover,
-                &:focus {
-                    transition: all 0.3s;
-                    background: #fff;
-
-                    svg {
-                        fill: #2f3b3f;
-                    }
-                }
-
-                svg {
-                    fill: #fff;
-                    @include wh(1.5rem);
-                    transition: all 0.3s;
-
-
-                }
-            }
-        }
-    }
-
-
-    &__burger {
-        position: relative;
-    }
-}
-
-
-// Гамбургер
-.cmn-toggle-switch.active {
-    // padding: 0.7rem 1rem;
-    border: 1px solid #2F3B3F;
-    border-radius: 5px;
-    border-bottom: none;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    background-color: #fff;
-}
-
-.cmn-toggle-switch {
-    @include wh(1.5rem, 1.3rem);
-    z-index: 6000;
-    display: block;
-    margin: 0;
-    padding: 0;
-    font-size: 0;
-    appearance: none;
-    box-shadow: none;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease-out;
-    position: relative;
-
-    &:focus {
-        outline: none;
-    }
-
-    span {
-        @include wh(1.5rem, 0.2rem);
-        position: relative;
-        margin: auto;
-        display: block;
-
-        &::before,
-        &::after {
-            @include pseudo;
-            @include pos (absolute, $left: 0);
-            @include wh (100%, 0.2rem);
-            background-color: #2F3B3F;
-        }
-
-        &::before {
-            top: 0.5rem;
-        }
-
-        &::after {
-            bottom: 0.5rem;
-        }
-
-
-    }
-
-    // .cmn-toggle-switch__htx
-    &__htx {
-        background-color: transparent;
-        transition: all 1s ease-out;
-
-        span {
-            background-color: #2F3B3F;
-            transition: background 0.3s ease-out;
-
-            &::before,
-            &::after {
-                transition-duration: 0.3s, 0.3s;
-            }
-
-            &::before {
-                transition-property: top, transform;
-            }
-
-            &::after {
-                transition-property: bottom, transform;
-            }
-        }
-    }
-
-    .cmn-toggle-switch__htx.active {
-        position: absolute;
-        z-index: 8000;
-        width: 4.7rem;
-        height: 4.7rem;
-
-        span {
-            background: none;
-            width: 3rem;
-            right: 0.5rem;
-
-            &::before,
-            &::after {
-
-                transition-delay: 0.3s;
-            }
-
-            &::before {
-                top: 0;
-                transform: rotate(45deg);
-            }
-
-            &::after {
-                bottom: 0;
-                transform: rotate(-45deg);
-            }
+        @include media (xlg) {
+            @include wh (9.9rem, 5.0rem);
         }
     }
 }
+
+// .header {
+//     padding: 0.2rem 0;
+//     z-index: 3;
+//     @include media (xlg) {
+//         padding: 0.8rem 0;
+//     }
+//     // .header__flex
+//     &__flex {
+//         @include flex (space-between, center);
+//         width: 100%;
+//         padding: 0 1.5rem;
+//     }
+//     // .header__logo
+//     &__logo {
+//         @include wh (6.6rem, 1.6rem);
+//         @media (min-width: 1024px) {
+//             height: 2.4rem;
+//         }
+//         @include media (xlg) {
+//             @include wh (11rem, 2.4rem);
+//         }
+//         @include media (xxl) {
+//             height: 2.7rem;
+//         }
+//         svg {
+//             @include wh (100%);
+//             fill: #2F3B3F;
+//         }
+//     }
+//     /***** форма поиска ********/
+//     // .header__form 
+//     &__form {
+//         width: 1.5rem;
+//         position: relative;
+//         &::after {
+//             @include pseudo;
+//             @include background(url("../img/icons/search.svg"));
+//             @include wh(1.5rem);
+//             @include pos(absolute,
+//             $top: 0, $left: 0);
+//         }
+//         input[type="text"] {
+//             color: #2f3b3f;
+//         }
+//         input {
+//             background-image: none !important;
+//             width: 100%;
+//             outline: none;
+//             border: none;
+//         }
+//         button {
+//             display: none;
+//         }
+//         &.active {
+//             width: 24rem;
+//             padding: 0.7rem 10px 0.7rem 3.4rem;
+//             border: 1px solid #2F3B3F;
+//             border-radius: 5px;
+//             @include media (lg) {
+//                 margin: 0 1rem;
+//             }
+//             &::after {
+//                 @include pos(absolute,
+//                 $top: 7px, $left: 11px);
+//             }
+//             button {
+//                 display: block;
+//                 @include wh(3.5rem,
+//                 3rem);
+//                 border-radius: 5px;
+//                 background-color: #2f3b3f;
+//                 outline: none;
+//                 transition: all 0.3s;
+//                 @include pos (absolute,
+//                 $top: 3px, $right: 3px);
+//                 &:hover,
+//                 &:focus {
+//                     transition: all 0.3s;
+//                     background: #fff;
+//                     svg {
+//                         fill: #2f3b3f;
+//                     }
+//                 }
+//                 svg {
+//                     fill: #fff;
+//                     @include wh(1.5rem);
+//                     transition: all 0.3s;
+//                 }
+//             }
+//         }
+//     }
+//     &__burger {
+//         position: relative;
+//     }
+// }
+// // Гамбургер
+// .cmn-toggle-switch.active {
+//     // padding: 0.7rem 1rem;
+//     border: 1px solid #2F3B3F;
+//     border-radius: 5px;
+//     border-bottom: none;
+//     border-bottom-left-radius: 0;
+//     border-bottom-right-radius: 0;
+//     background-color: #fff;
+// }
+// .cmn-toggle-switch {
+//     @include wh(1.5rem,
+//     1.3rem);
+//     z-index: 6000;
+//     display: block;
+//     margin: 0;
+//     padding: 0;
+//     font-size: 0;
+//     appearance: none;
+//     box-shadow: none;
+//     border: none;
+//     cursor: pointer;
+//     transition: background 0.3s ease-out;
+//     position: relative;
+//     &:focus {
+//         outline: none;
+//     }
+//     span {
+//         @include wh(1.5rem,
+//         0.2rem);
+//         position: relative;
+//         margin: auto;
+//         display: block;
+//         &::before,
+//         &::after {
+//             @include pseudo;
+//             @include pos (absolute,
+//             $left: 0);
+//             @include wh (100%,
+//             0.2rem);
+//             background-color: #2F3B3F;
+//         }
+//         &::before {
+//             top: 0.5rem;
+//         }
+//         &::after {
+//             bottom: 0.5rem;
+//         }
+//     }
+//     // .cmn-toggle-switch__htx
+//     &__htx {
+//         background-color: transparent;
+//         transition: all 1s ease-out;
+//         span {
+//             background-color: #2F3B3F;
+//             transition: background 0.3s ease-out;
+//             &::before,
+//             &::after {
+//                 transition-duration: 0.3s, 0.3s;
+//             }
+//             &::before {
+//                 transition-property: top, transform;
+//             }
+//             &::after {
+//                 transition-property: bottom, transform;
+//             }
+//         }
+//     }
+//     .cmn-toggle-switch__htx.active {
+//         position: absolute;
+//         z-index: 8000;
+//         width: 4.7rem;
+//         height: 4.7rem;
+//         span {
+//             background: none;
+//             width: 3rem;
+//             right: 0.5rem;
+//             &::before,
+//             &::after {
+//                 transition-delay: 0.3s;
+//             }
+//             &::before {
+//                 top: 0;
+//                 transform: rotate(45deg);
+//             }
+//             &::after {
+//                 bottom: 0;
+//                 transform: rotate(-45deg);
+//             }
+//         }
+//     }
+// }
