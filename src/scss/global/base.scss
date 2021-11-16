@@ -39,12 +39,16 @@ footer {
     padding: 0 1.6rem;
     margin: 0 auto;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    // @include media (xlg) {
-    //     max-width: 96rem;
-    // }
+    // xlg
+    @media screen and (min-width: 1024px) {
+        padding: 0 24px;
+    }
+    // xxl
+    @media screen and (min-width: 1920px) {
+        max-width: 1520px;
+        padding: 0;
+        margin: 0 auto;
+    }
 }
 
 .no-scroll {
