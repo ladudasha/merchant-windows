@@ -7,11 +7,10 @@ header.header
                 include ./../../bem-blocks/menu/menu-top.pug
                 form#form.header__form
                     input._req(type="text" value="" placeholder="Напишите")
-                    button#formBtn(type="button")
-                        svg(width="14" height="14")
-                            use(xlink:href="./wp-content/themes/factory_windows/assets/img/icons/sprite.svg#enter")
+                    button#formBtn(type="button") Найти
                 .header__burger
-                    button#menu__button.cmn-toggle-switch.cmn-toggle-switch__htx
+                    //- button
+                    #menu__button.cmn-toggle-switch.cmn-toggle-switch__htx
                         span.toggle.menu
                     include ./../../bem-blocks/menu/menu-mobile.pug
                 
