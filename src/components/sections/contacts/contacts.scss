@@ -61,5 +61,8 @@
         @include media (xxl) {
             gap: 2.5rem;
         }
+        svg {
+            fill: white
+        }
     }
 }

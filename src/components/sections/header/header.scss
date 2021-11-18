@@ -18,10 +18,8 @@
                 @include wh (9.9rem, 5.0rem);
             }
         }
-        /***** форма поиска ********/
-        // .header__form 
-        &__form {
-            // width: 20.4rem;
+        /***** форма поиска mobile ********/
+        &__seach {
             position: relative;
             input {
                 width: 20.4rem;
@@ -43,7 +41,7 @@
             button {
                 position: absolute;
                 @include pos (absolute, $top: 5px, $right: 2px);
-                background: #E34747;
+                background: #47e35c;
                 border-radius: 5px;
                 display: block;
                 @include wh(7.2rem, 2.4rem);
@@ -62,6 +60,107 @@
                     display: none;
                 }
             }
+        }
+        /***** форма поиска ПЛАНШЕТ ********/
+        // .header__form 
+        &__form {
+            width: 1.5rem;
+            display: none;
+            position: relative;
+            @include media (xlg) {
+                display: block;
+            }
+            &::after {
+                @include pseudo;
+                @include background(url("../img/icons/search.svg"));
+                @include wh(1.5rem);
+                @include pos(absolute,
+                $top: -1rem, $left: 0);
+            }
+            input {
+                display: none;
+            }
+            button {
+                display: none;
+            }
+            &.active {
+                width: 20.4rem;
+                width: 20.4rem;
+                height: 3.2rem;
+                padding-left: 3.5rem;
+                background: transparent;
+                border: 1px solid #B8B8B8;
+                border-radius: 8px;
+                color: #B8B8B8;
+                font-family: Source Sans Pro;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                &::after {
+                    @include pos(absolute,
+                    $top: 7px, $left: 11px);
+                }
+                button {
+                    position: absolute;
+                    @include pos (absolute,
+                    $top: 5px, $right: 2px);
+                    background: #E34747;
+                    border-radius: 5px;
+                    display: block;
+                    @include wh(7.2rem,
+                    2.4rem);
+                    transition: all 0.3s;
+                }
+            }
+            // display: none;
+            // position: relative;
+            // @include media (xlg) {
+            //     display: block;
+            // }
+            // input {
+            //     width: 20.4rem;
+            //     height: 3.2rem;
+            //     padding-left: 3.5rem;
+            //     background: transparent;
+            //     border: 1px solid #B8B8B8;
+            //     border-radius: 8px;
+            //     color: #B8B8B8;
+            //     font-family: Source Sans Pro;
+            //     font-style: normal;
+            //     font-weight: normal;
+            //     font-size: 16px;
+            //     line-height: 20px;
+            //     display: none;
+            //     @include media (xlg) {
+            //         display: block;
+            //     }
+            // }
+            // button {
+            //     position: absolute;
+            //     @include pos (absolute,
+            //     $top: 5px, $right: 2px);
+            //     background: #E34747;
+            //     border-radius: 5px;
+            //     display: block;
+            //     @include wh(7.2rem,
+            //     2.4rem);
+            //     transition: all 0.3s;
+            //     display: none;
+            //     @include media (xlg) {
+            //         display: block;
+            //     }
+            // }
+            // &::after {
+            //     @include pseudo;
+            //     @include background(url("../img/icons/search.svg"));
+            //     @include wh(1.4rem);
+            //     @include pos(absolute,
+            //     $top: 1rem, $left: 1rem);
+            //     display: none;
+            //     @include media (xlg) {
+            //         display: block;
+            //     }
+            // }
             // &.active {
             //     width: 20.4rem;
             //     height: 3.2rem;
