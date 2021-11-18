@@ -1,0 +1,68 @@
+.contacts {
+    padding: 2.2rem 0;
+    background: #2D2D2D;
+    display: none;
+    @include media (xlg) {
+        display: block;
+    }
+    &__flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__right {
+        display: flex;
+        gap: 4.7rem;
+        @include media (xxl) {
+            gap: 5.1rem;
+        }
+    }
+    &__work {
+        display: flex;
+        flex-direction: column;
+        @include media (xxl) {
+            flex-direction: row;
+        }
+    }
+    &__time {
+        padding-bottom: 0.8rem;
+        @include media (xxl) {
+            padding-bottom: 0rem;
+            margin-right: 16px;
+        }
+    }
+    &__BTNS {
+        display: flex;
+        gap: 2.9rem;
+        @include media (xxl) {
+            gap: 3.1rem;
+        }
+    }
+    &__BTN {
+        border: 1px solid #E34747;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 14px 24px;
+        color: #ffffff;
+        font-family: Source Sans Pro;
+        font-size: 18px;
+        line-height: 23px;
+        font-style: normal;
+        font-weight: normal;
+        background: transparent;
+        @include wh(22.3rem, 5.1rem);
+    }
+    &__social {
+        display: flex;
+        gap: 2.4rem;
+        @include media (xxl) {
+            gap: 2.5rem;
+        }
+        svg {
+            fill: white
+        }
+    }
+}
