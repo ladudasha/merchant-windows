@@ -24,6 +24,9 @@
             flex-direction: row;
         }
     }
+    &__color {
+        color: red;
+    }
     &__time {
         padding-bottom: 0.8rem;
         @include media (xxl) {
